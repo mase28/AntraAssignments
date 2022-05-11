@@ -140,6 +140,5 @@ order by Name Asc
 12. Write a query that retrieves the unique combination of
 columns ProductSubcategoryID and Color from the Production.Product table. We do not want any rows that are NULL.in any of the two columns in the result. (Hint: Use IsNull)
 
-select ProductSubcategoryID, Color
+select isNull(ProductSubcategoryID, 0) as "Product Sub ID", isNull(Color, 'N/A') as Color
 from Production.Product
-where ProductSubcategory is not null and Color is not null
