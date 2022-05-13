@@ -1,0 +1,220 @@
+Conceptual Questions
+
+1. Difference between WHERE and HAVING?
+	Both are filters but having applies to groups and filters on aggregate functions, and where
+	applies to individual rows. Where can be used with Select, Update, and Delete, and having can
+	only be used with select.
+
+2. Difference between RANK() and DenseRank()?
+	When ties occur, Rank will skip values according to the number of ties whereas DenseRank will
+	stay consecutive before and after ties.
+
+3. What is a correlated subquery?
+	A correlated subquery is a subquery that is dependent on the outer query.
+
+4. Criteria of Union and Union all?
+	The criteria of Union and Union All is that there must be the same number of columns in each
+	select statement, the columns retrieved must be in the same order in the select statement, 
+	and the columns must have similar data types. 
+
+5. Difference between UNION and UNION ALL?
+	The difference between Union and Union All are: Union removes duplicates where union all 
+	doesn't, Unions cannot bne used in recursive CTE while Union All can.
+
+6. Difference between Union and Join?
+	Union combines columns to create new rows whereas Join combines rows based on a matching 
+	column.
+
+
+Queries
+
+1. Write a query that lists the country and province names from person.CountryRegion and person.StateProvince tables. Join them and produce a result set similar to the following.
+
+    Country		Province
+
+select cr.Name as Country, sp.Name as Province
+from Person.CountryRegion cr join Person.StateProvince sp on cr.CountryRegionCode = sp.CountryRegionCode
+
+2. Write a query that lists the country and province names from person.CountryRegion and person.StateProvince tables and list the countries filter them by Germany and Canada. Join them and produce a result set similar to the following.
+
+    Country             Province
+
+select cr.Name as Country, sp.Name as Province
+from Person.CountryRegion cr join Person.StateProvince sp on cr.CountryRegionCode = sp.CountryRegionCode
+where cr.Name in ('Germany','Canada')
+
+
+
+ Using Northwind Database: (Use aliases for all the Joins)
+
+
+3. List all Products that has been sold at least once in last 25 years.
+
+select p.ProductName
+from Orders o join [Order Details] ord on o.OrderID = ord.OrderID join Products p on p.ProductID = ord.ProductID
+where o.OrderDate > '1997-05-11 00:00:00.000'
+group by p.ProductName
+
+4. List top 5 locations (Zip Code) where the products sold most in last 25 years.
+
+select top 5 o.ShipPostalCode, count(o.ShipPostalCode) as [NumOrders]
+from orders o join [Order Details] ord on o.OrderID = ord.OrderID 
+where o.OrderDate > '1997-05-11 00:00:00.000'
+group by o.ShipPostalCode
+order by NumOrders Desc
+
+5. List all city names and number of customers in that city.     
+
+select City, count(CustomerID) as [Num Customers]
+from Customers
+group by City
+
+6. List city names which have more than 2 customers, and number of customers in that city
+
+select City, count(CustomerID) as [Num Customers]
+from Customers
+group by City
+having count(CustomerID) > 2
+
+7. Display the names of all customers  along with the  count of products they bought
+
+select c.ContactName, count(o.OrderID) as [Num Orders]
+from Customers c left join Orders o on c.CustomerID = o.CustomerID
+group by c.ContactName
+
+8. Display the customer ids who bought more than 100 Products with count of products.
+
+select c.CustomerID, sum(ord.Quantity) as [Num Products]
+from Orders o join Customers c on c.CustomerID = o.CustomerID join [Order Details] ord on o.OrderID = ord.OrderID
+group by c.CustomerID
+having sum(ord.Quantity) > 100
+
+9. List all of the possible ways that suppliers can ship their products. Display the results as below
+
+    Supplier Company Name                       Shipping Company Name
+
+    ---------------------------------           ----------------------------------
+
+select sp.CompanyName [Supplier Company Name], sh.CompanyName [Shipping Company Name]
+from Shippers sh cross join Suppliers sp 
+
+10. Display the products order each day. Show Order date and Product Name.
+
+select p.ProductName, o.OrderDate
+from Orders o join [Order Details] ord on o.OrderID = ord.OrderID join Products p on ord.ProductID = p.ProductID
+group by p.ProductName, o.OrderDate
+
+11. Displays pairs of employees who have the same job title.
+
+select distinct e1.FirstName + ' ' + e1.LastName [Full Name], e2.FirstName + ' ' + e2.LastName [Full Name], e1.Title
+from Employees e1 join Employees e2 on e1.Title = e2.Title
+where e1.FirstName + ' ' + e1.LastName != e2.FirstName + ' ' + e2.LastName
+
+12. Display all the Managers who have more than 2 employees reporting to them.
+
+select e1.FirstName + ' ' + e1.LastName [Manager]
+from Employees e1 join Employees e2 on e1.EmployeeID = e2.ReportsTo
+group by e1.FirstName + ' ' + e1.LastName
+having count(e1.FirstName + ' ' + e1.LastName) > 2
+
+13. Display the customers and suppliers by city. The results should have the following columns
+
+City	Name	Contact Name	Type (Customer or Supplier)
+
+select c.City, c.CompanyName, c.ContactName, 'Employee' [Type]
+from Customers c
+union 
+select s.City, s.CompanyName, s.ContactName, 'Supplier'
+from Suppliers s
+
+All scenarios are based on Database NORTHWIND.
+
+
+14. List all cities that have both Employees and Customers.
+
+select c.City
+from Customers c join Employees e on c.City = e.City
+group by c.City
+
+15. List all cities that have Customers but no Employee.
+
+a. Use sub-query
+
+select c.City
+from Customers c 
+where c.City not in (select e.City from Employees e)
+
+b. Do not use sub-query
+
+select c.City
+from Customers c left join Employees e on c.City = e.City
+where e.city is Null
+
+16. List all products and their total order quantities throughout all orders.
+
+select p.ProductName, sum(ord.Quantity) [Num Orders]
+from Orders o join [Order Details] ord on o.OrderID = ord.OrderID join Products p on p.ProductID = ord.ProductID
+group by p.ProductName
+
+17. List all Customer Cities that have at least two customers.
+
+
+a. Use union
+
+
+
+b. Use sub-query and no union
+
+select dt.City, count(dt.CustomerID) [Num Customers]
+from (select City, CustomerID from Customers) dt
+group by dt.City
+having count(dt.CustomerID) > 2
+
+18. List all Customer Cities that have ordered at least two different kinds of products.
+
+with cityOrders
+as( 
+select c.City, o.OrderID
+from Customers c join Orders o on c.CustomerID = o.CustomerID),
+cityProducts as(
+select distinct co.City, od.ProductID
+from cityOrders co join [Order Details] od on co.OrderID = od.OrderID)
+select cp.City
+from cityProducts cp 
+group by cp.City
+having count(cp.ProductID) >= 2
+
+19. List 5 most popular products, their average price, and the customer city that ordered most quantity of it.
+
+with topFivePopular
+as(
+select top 5 p.ProductID, p.ProductName, Avg(p.UnitPrice) [AvgUnitPrice], sum(Quantity) [SoldTotal]
+from Products p join [Order Details] od on p.ProductID = od.ProductID
+group by p.ProductID, p.ProductName
+Order by [SoldTotal] Desc),
+cityTotals as (select p.ProductID, ShipCity, count(p.ProductID) [City Total Orders]
+from Products p join [Order Details] od on od.ProductID = p.ProductID join Orders o on od.OrderID = o.OrderID
+where p.ProductID in (select ProductID from topFivePopular)
+group by ShipCity, p.ProductID)
+select ct.ProductID, tp.ProductName, tp.AvgUnitPrice, ct.ShipCity, ct.[City Total Orders]
+from cityTotals ct join (
+select ProductID, Max([City Total Orders]) [City Total Orders]
+from cityTotals
+group by ProductID) dt on ct.ProductID = dt.ProductID and ct.[City Total Orders] = dt.[City Total Orders] left join topFivePopular tp on ct.ProductID = tp.ProductID
+
+20. List one city, if exists, that is the city from where the employee sold most orders (not the product quantity) is, and also the city of most total quantity of products ordered from. (tip: join  sub-query)
+
+select dt.City, dt.Total, 'City Employee Sold Most' 
+from (select top 1 e.City, count(o.OrderID) [Total]
+from Orders o join Employees e on o.EmployeeID = e.EmployeeID
+group by e.EmployeeID, e.City
+order by Total Desc) dt
+union all
+select dt.ShipCity, dt.Total, 'City Ordered Most Quantity'
+from (select top 1 o.ShipCity, sum(od.Quantity) [Total]
+from Orders o join [Order Details] od on o.OrderID = od.OrderID 
+group by o.ShipCity
+order by Total Desc) dt
+
+21. How do you remove the duplicates record of a table?
+	You can remove the duplicate records of a table by using the keyword distinct after select.
