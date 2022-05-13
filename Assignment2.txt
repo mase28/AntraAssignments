@@ -161,7 +161,19 @@ group by p.ProductName
 
 a. Use union
 
-
+select City, count(City) [CityCount] 
+from Customers
+group by City
+except 
+(select City, count(City)
+from Customers
+group by City
+having count(City) = 1
+union 
+select City, count(City)
+from Customers
+group by City
+having count(City) = 0)
 
 b. Use sub-query and no union
 
