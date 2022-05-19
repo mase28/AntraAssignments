@@ -1,0 +1,15 @@
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\bin\Debug\net6.0\WorkingWithMethods.exe
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\bin\Debug\net6.0\WorkingWithMethods.deps.json
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\bin\Debug\net6.0\WorkingWithMethods.runtimeconfig.json
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\bin\Debug\net6.0\WorkingWithMethods.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\bin\Debug\net6.0\WorkingWithMethods.pdb
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.csproj.AssemblyReference.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.AssemblyInfoInputs.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.AssemblyInfo.cs
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.csproj.CoreCompileInputs.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\refint\WorkingWithMethods.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.pdb
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\WorkingWithMethods.genruntimeconfig.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\WorkingWithMethods\WorkingWithMethods\obj\Debug\net6.0\ref\WorkingWithMethods.dll
