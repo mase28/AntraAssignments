@@ -51,22 +51,54 @@ namespace PracticeStrings
             for (int i = 0; i < words.Length / 2; i++)
             {
                 string temp = words[i];
-                char punct = ' ';
-                if (ignore.Contains(temp[temp.Length-1]))
+                string temp_aft = "";
+                int target = words.Length - 1 - i;
+                string targ_aft = "";
+                
+                string temp_punct_bef = "";
+                string temp_punct_aft = "";
+                string targ_punct_bef = "";
+                string targ_punct_aft = "";
+
+                bool flag = false;
+                for (int j = 0; j < temp.Length; j++)
                 {
-                    punct = temp[temp.Length - 1];
-                    temp = String.Join("", temp.Take(temp.Length - 1));
-                    words[i] = words[words.Length - 1 - i] + punct;
-                    words[words.Length - 1 - i] = temp;
-                } else if (ignore.Contains(words[words.Length - 1 - i][words[words.Length - 1 - i].Length - 1])) {
-                    punct = words[words.Length - 1 - i][words[words.Length - 1 - i].Length - 1];
-                    words[i] = String.Join("", words[words.Length - 1 - i].Take(words[words.Length - i - 1].Length - 1));
-                    words[words.Length - i - 1] = temp + punct;
-                } else
-                {
-                    words[i] = words[words.Length - 1 - i];
-                    words[words.Length - i - 1] = temp;
+                    if (ignore.Contains(temp[j]) && !flag)
+                    {
+                        temp_punct_bef += temp[j];
+                    } 
+                    else if (ignore.Contains(temp[j])) 
+                    {
+                        temp_punct_aft += temp[j];
+                    } 
+                    else
+                    {
+                        temp_aft += temp[j];
+                        flag = true;
+                    }
                 }
+
+                flag = false;
+                for (int j = 0; j < words[target].Length; j++)
+                {
+                    if (ignore.Contains(words[target][j]) && !flag)
+                    {
+                        targ_punct_bef += words[target][j];
+                    }
+                    else if (ignore.Contains(words[target][j]))
+                    {
+                        targ_punct_aft += words[target][j];
+                    }
+                    else
+                    {
+                        targ_aft += words[target][j];
+                        flag = true;
+                    }
+                }
+
+                words[i] = temp_punct_bef + targ_aft + temp_punct_aft;
+                words[target] = targ_punct_bef + temp_aft + targ_punct_aft;
+                
             }
             Console.WriteLine(String.Join(" ", words));
         }

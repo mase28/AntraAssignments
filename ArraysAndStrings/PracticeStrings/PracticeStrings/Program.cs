@@ -5,11 +5,17 @@ namespace PracticeStrings
     {
         public static int Main(string[] args)
         {
-            //Reverse.ReverseString();
+            Reverse.ReverseString();
+            Console.WriteLine();
 
-            //Reverse.ReverseWords();
+            Reverse.ReverseWords();
+            Console.WriteLine();
 
             Palindrome.FindPalindromes();
+            Console.WriteLine();
+
+            ParseURL.Start();
+            Console.WriteLine();
 
             return 0;
         }
