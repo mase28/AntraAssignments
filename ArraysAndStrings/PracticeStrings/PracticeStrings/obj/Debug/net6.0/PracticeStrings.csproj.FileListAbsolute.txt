@@ -1,0 +1,15 @@
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.csproj.AssemblyReference.cache
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.AssemblyInfoInputs.cache
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.AssemblyInfo.cs
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.csproj.CoreCompileInputs.cache
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\bin\Debug\net6.0\PracticeStrings.exe
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\bin\Debug\net6.0\PracticeStrings.deps.json
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\bin\Debug\net6.0\PracticeStrings.runtimeconfig.json
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\bin\Debug\net6.0\PracticeStrings.dll
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\bin\Debug\net6.0\PracticeStrings.pdb
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.dll
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\refint\PracticeStrings.dll
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.pdb
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\PracticeStrings.genruntimeconfig.cache
+C:\Users\Mason\source\AntraAssignments\ArraysAndStrings\PracticeStrings\PracticeStrings\obj\Debug\net6.0\ref\PracticeStrings.dll
