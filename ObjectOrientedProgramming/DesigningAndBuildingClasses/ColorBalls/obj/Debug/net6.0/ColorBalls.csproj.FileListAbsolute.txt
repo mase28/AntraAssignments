@@ -1,0 +1,15 @@
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\bin\Debug\net6.0\ColorBalls.exe
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\bin\Debug\net6.0\ColorBalls.deps.json
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\bin\Debug\net6.0\ColorBalls.runtimeconfig.json
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\bin\Debug\net6.0\ColorBalls.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\bin\Debug\net6.0\ColorBalls.pdb
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.csproj.AssemblyReference.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.AssemblyInfoInputs.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.AssemblyInfo.cs
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.csproj.CoreCompileInputs.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\refint\ColorBalls.dll
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.pdb
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ColorBalls.genruntimeconfig.cache
+C:\Users\Mason\source\AntraAssignments\ObjectOrientedProgramming\DesigningAndBuildingClasses\ColorBalls\obj\Debug\net6.0\ref\ColorBalls.dll

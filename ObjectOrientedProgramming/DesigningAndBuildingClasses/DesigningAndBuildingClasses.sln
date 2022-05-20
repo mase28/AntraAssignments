@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University", "DesigningAndBuildingClasses\University.csproj", "{C069719E-CEF5-4319-9414-13370D982542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorBalls", "ColorBalls\ColorBalls.csproj", "{F43BFF43-4134-440A-98A5-B2AFBE64EB3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C069719E-CEF5-4319-9414-13370D982542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C069719E-CEF5-4319-9414-13370D982542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C069719E-CEF5-4319-9414-13370D982542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C069719E-CEF5-4319-9414-13370D982542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43BFF43-4134-440A-98A5-B2AFBE64EB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43BFF43-4134-440A-98A5-B2AFBE64EB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43BFF43-4134-440A-98A5-B2AFBE64EB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43BFF43-4134-440A-98A5-B2AFBE64EB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B12D92D-FE3E-4318-AA95-2114337D504F}
+	EndGlobalSection
+EndGlobal
